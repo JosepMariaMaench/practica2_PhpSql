@@ -3,8 +3,8 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "php";
-
+$dbname = $baseecollida;
+$iscreated = false;
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -20,7 +20,9 @@ $sql = "CREATE TABLE IF NOT EXISTS SqlHistory (
 
 if ($conn->query($sql) === true) {
     echo "The table is created successfully";
+    $iscreated = true;
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
+    $iscreated = false;
 }
 $conn->close();
