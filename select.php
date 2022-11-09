@@ -31,8 +31,9 @@ if ($iscreated = true) {
             echo "<table><tr><th>ID</th><th>Sentence</th><th>Executed_at</th></tr>";
             while ($row = $resultSelect->fetch_assoc()) {
                 echo "<tr><td>" . $row["id"] . "</td><td>"
-                . $row["sentence"] . "</td><td>"
-                . $row["executed_at"] . "</td></tr>";
+                . $row["sentence"]
+                . "</td><input type = 'submit' name = 'contenido' value = 'Executed_at'>"
+                . $row["executed_at"] . "</input></tr>";
             }
             echo "</table>";
         } else {
