@@ -10,7 +10,6 @@ $username = "root";
 $password = "";
 $dbname = $baseecollida;
 
-
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
