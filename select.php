@@ -16,6 +16,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+
 $sqlSelect = "SELECT id, sentence, executed_at
 FROM SqlHistory
 ORDER BY executed_at DESC; )";
